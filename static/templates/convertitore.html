@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Convertitore Temperature</title>
+</head>
+<body>
+
+<h2>Convertitore °C / °F</h2>
+
+<form method="POST">
+
+    <p>Inserisci temperatura:
+        <input type="number" step="0.01" name="temp" required>
+    </p>
+
+    <!-- BOTTONI -->
+    <button type="submit" name="azione" value="f_to_c">
+        Fahrenheit → Centigradi
+    </button>
+
+    <button type="submit" name="azione" value="c_to_f">
+        Centigradi → Fahrenheit
+    </button>
+
+</form>
+
+{% if risultato %}
+    <h3>Risultato: {{ risultato }}</h3>
+{% endif %}
+
+</body>
+</html>
